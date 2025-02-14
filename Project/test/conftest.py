@@ -9,5 +9,3 @@ def get_driver():
         driver.get(TestUrls.MAIN_PAGE_URL)
         yield driver
         driver.quit()
-
-
