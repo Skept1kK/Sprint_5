@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from data import TestData
 
+
 @pytest.mark.usefixtures("get_driver")
 class TestLoginToPersonalAccount:
     # вход по кнопке «Войти в аккаунт» на главной

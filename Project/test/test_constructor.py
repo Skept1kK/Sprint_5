@@ -39,7 +39,7 @@ class TestConstructor:
         driver.find_element(*locators.MAIN_PAGE_FILLINGS_TAB).click()
         WebDriverWait(driver, 30).until(expected_conditions.visibility_of_element_located(locators.MAIN_PAGE_ROLLS_TAB))
         driver.find_element(*locators.MAIN_PAGE_ROLLS_TAB).click()
-        assert driver.find_element(*locators.MAIN_PAGE_ROLLS_CLASS).is_displayed()
+        assert is_active(driver, locators.MAIN_PAGE_ROLLS_TAB)
 
     # Проверка вкладки "Начинка"
     def test_fillings_tab(self, get_driver):
