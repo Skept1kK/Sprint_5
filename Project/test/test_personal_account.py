@@ -29,8 +29,8 @@ class TestLoginToPersonalAccount:
         driver.find_element(*locators.MAIN_PAGE_PROFILE_LINK).click()
         WebDriverWait(driver, 30).until(expected_conditions.visibility_of_element_located(locators.PROFILE_PAGE_EXIT_BUTTON))
         driver.find_element(*locators.PROFILE_PAGE_EXIT_BUTTON).click()
-        WebDriverWait(driver, 30).until(expected_conditions.visibility_of_element_located(locators.MAIN_PAGE_ORDER_BUTTON))
-        assert driver.find_element(*locators.MAIN_PAGE_ORDER_BUTTON).is_displayed()
+        WebDriverWait(driver, 30).until(expected_conditions.visibility_of_element_located(locators.AUTH_PAGE_LOGIN_BUTTON))
+        assert driver.find_element(*locators.AUTH_PAGE_LOGIN_BUTTON).is_displayed()
 
     # переход по клику на «Конструктор»
     def test_personal_account_to_constructor(self, get_driver):
